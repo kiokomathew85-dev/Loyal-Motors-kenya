@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Manual Meta Tags for SEO -->
+    <meta name="description" content="Finalize your luxury unit purchase at Loyal Motors Kenya.">
+    <title>Secure Checkout | Loyal Motors Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+
+    <header>
+        <div class="brand-wrap">
+            <h1>Loyal Motors <span style="color: gold;">Kenya</span></h1>
+        </div>
+        <nav>
+            <ul id="main-nav">
+                <li><a href="index.html">Showroom</a></li>
+                <li><a href="buy.html" class="active">Sales/Checkout</a></li>
+                <li><a href="garage.html">My Garage</a></li>
+                <!-- Admin is hidden for public users -->
+                <li><a href="admin.html">Management</a></li>
+                <li><a href="about.html">Our Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wrapper">
+        <h2 class="page-header" style="text-align: center; margin: 2rem 0; color: gold;">Order Summary & Finalization</h2>
+        
+        <div class="checkout-flex-row" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px;">
+            
+            <!-- Unit Preview Area -->
+            <div id="checkoutPreview" class="preview-panel">
+                <!-- Data injected via script.js -->
+            </div>
+
+            <!-- Buyer Details Form -->
+            <div class="order-form-container" style="flex: 1; min-width: 320px; max-width: 450px;">
+                <form id="purchaseForm" class="manual-form">
+                    <h3 style="margin-bottom: 15px; color: gold; border-bottom: 1px solid #333;">Customer Details</h3>
+                    
+                    <div class="input-block">
+                        <label for="buyerName">Full Name / Company Name:</label>
+                        <input type="text" id="buyerName" placeholder="Enter name for registration" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="buyerEmail">Active Email:</label>
+                        <input type="email" id="buyerEmail" placeholder="yourname@domain.com" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="paymentMethod">Preferred Payment Channel:</label>
+                        <select id="paymentMethod" class="custom-select" style="width: 100%; padding: 10px; margin-top: 5px; background: #111; color: #fff; border: 1px solid #555;">
+                            <option value="mpesa">M-Pesa Business (STK Push)</option>
+                            <option value="bank">Bank Wire Transfer</option>
+                            <option value="crypto">USDT / Bitcoin</option>
+                        </select>
+                    </div>
+
+                    <div class="action-wrap" style="margin-top: 25px;">
+                        <button type="submit" class="submit-order-btn" style="width: 100%; padding: 15px; background: gold; color: black; font-weight: bold; cursor: pointer; border: none;">Place Official Order</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Loyal Motors Kenya | Authorized Dealer</p>
+    </footer>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Garage | Loyal Motors</title>
+    <!-- Core styles for the portal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="garage-view">
+    <header id="top-nav-bar">
+        <div class="brand-box">
+            <h1>My <span style="color: gold;">Garage</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Showroom</a></li>
+                <li><a href="buy.html">Checkout</a></li>
+                <li><a href="garage.html" class="active">My Garage</a></li>
+                
+                <li><a href="admin.html">Management</a></li>
+                <li><a href="about.html">Our Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="garage-controls" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #222;">
+            <h2 class="sub-header">Your Unit Collection</h2>
+            
+            <button id="clearGarageBtn" class="btn-clear-inventory" style="background: #8b0000; color: #fff; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Clear Entire Garage</button>
+        </section>
+
+        
+        <div id="garageDisplay" class="grid-container" style="padding-top: 30px;">
+            
+        </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

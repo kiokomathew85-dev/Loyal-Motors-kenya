@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal: Loyal Motors Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Manual Override Styles for Admin Only -->
+    <style>
+        .admin-header { border-bottom: 2px solid gold; margin-bottom: 30px; }
+        .upload-card { background: #1a1a1a; padding: 2rem; border-radius: 15px; max-width: 600px; margin: 0 auto; }
+    </style>
+</head>
+<body class="admin-portal-bg">
+    <header class="admin-header">
+        <div class="brand-container">
+            <h1>Loyal Motors <span style="color: gold;">Portal</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links-custom">
+                <li><a href="index.html">Live Showroom</a></li>
+                <li><a href="buy.html">Sales Terminal</a></li>
+                <li><a href="garage.html">Inventory Log</a></li>
+                <!-- Management Link - keep active -->
+                <li><a href="admin.html" class="active">Management</a></li>
+                <li><a href="about.html">Our Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wrapper">
+        <section class="upload-card">
+            <h2 class="form-title">Stock Entry (New Unit)</h2>
+            
+            <form id="vehicle-upload-form" autocomplete="off">
+                <div class="field-wrap">
+                    <label>Vehicle Make/Model:</label>
+                    <input type="text" id="car-model-name" placeholder="e.g. Toyota Landcruiser LC300" required>
+                </div>
+                
+                <div class="field-wrap">
+                    <label>Asking Price (USD):</label>
+                    <input type="number" id="asking-price" placeholder="150000" required>
+                </div>
+                
+                <div class="field-wrap">
+                    <label>Vehicle Media (Photo):</label>
+                    <input type="file" id="unit-photo" accept="image/*" required>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="submit" class="submit-unit-btn">Publish to Showroom</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

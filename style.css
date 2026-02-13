@@ -1,0 +1,203 @@
+/* 
+ * Loyal Motors Kenya - Theme Stylesheet 
+ * Manual overrides for Portal & Showroom 
+ */
+
+:root {
+    --gold-main: #d4af37;
+    --deep-bg: #0f0f0f;
+    --card-surface: #1a1a1a;
+    --text-pure: #ffffff;
+    --danger-red: #cc0000;
+    --speed: 0.25s ease-in-out;
+}
+
+/* 1. Global Resets & Human Quirks */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Custom Scrollbar for that 'Premium' feel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gold-main);
+    border-radius: 10px;
+}
+
+body {
+    background-color: #121212; /* Darker than slate for luxury look */
+    color: #efefef;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 2. Navigation & Branding */
+header {
+    background: #000;
+    padding: 1rem 6%;
+    border-bottom: 2px solid var(--gold-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.brand-wrap h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+    gap: 22px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--speed);
+}
+
+nav a:hover, nav a.active {
+    color: var(--gold-main);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* 3. Grid & Inventory Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 30px;
+    padding: 50px 6%;
+}
+
+.car-card {
+    background: var(--card-surface);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.car-card:hover {
+    transform: scale(1.03);
+    border-color: var(--gold-main);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.car-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover; 
+    border-bottom: 1px solid #333;
+}
+
+/* 4. Form Styling - FIXED the 'var' errors */
+.form-section, .upload-card {
+    max-width: 550px;
+    margin: 60px auto;
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.input-block, .field-wrap {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--gold-main);
+    text-transform: uppercase;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    background: #0a0a0a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--gold-main);
+}
+
+/* 5. Buttons - Humanized with better feedback */
+.btn, button {
+    background: var(--gold-main);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn:hover, button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: var(--danger-red);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #ff0000;
+}
+
+/* 6. Checkout Summary Panel */
+.summary-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px dashed var(--gold-main);
+    text-align: center;
+}
+
+/* 7. Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    background: #000;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+}
