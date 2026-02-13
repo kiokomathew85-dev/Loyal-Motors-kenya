@@ -23,7 +23,7 @@ const defaultStock = [
     { name: "Maybach S680", price: 200000, img: "images/maybach.jpg" },
     { name: "Cadillac Escalade-V", price: 65000, img: "images/cadillac.jpg" },
     { name: "V-siries", price: 95000, img: "images/v-siries.jpg" },
-    { name: "Toyota Landcruiser Prado 2024", price: 85000, img: "images/prado.jpg" }
+    
 ];
 
 // --- STORAGE SYNC ---
@@ -164,3 +164,4 @@ window.adminDel = (idx) => {
         location.reload();
     }
 };
+
