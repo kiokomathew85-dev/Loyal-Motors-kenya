@@ -5,7 +5,7 @@ Live Demo( https://kiokomathew85-dev.github.io/Loyal-Motors-kenya/) (kiokomathew
 
 Our Legacy.
 
-Motors Kenya. At Loyal Motors Kenya, we believe luxury isn’t just about a car — it’s about the experience.
+Motors Kenya. At Loyal Motors Kenya, we believe luxury isn’t just about a car it’s about the experience.
 
 We are passionate about connecting discerning drivers with the world’s most prestigious automotive marques, from sleek performance icons to refined grand tourers.
 
