@@ -1,7 +1,7 @@
 # Loyal Motors Kenya 
 **A premium web platform for high-quality vehicle sales and imports in Kenya.**
 
-Live Demo() (kiokomathew85-dev)
+Live Demo( https://kiokomathew85-dev.github.io/Loyal-Motors-kenya/) (kiokomathew85-dev)
 
 Our Legacy.
 
