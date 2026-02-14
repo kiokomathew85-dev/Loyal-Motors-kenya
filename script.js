@@ -57,7 +57,7 @@ if (checkoutView) {
     if (!active) {
         checkoutView.innerHTML = "<h3>Selection empty. <a href='index.html'>Go back</a></h3>";
     } else {
-        const kesRate = 130.25; // Manual human-picked rate
+        const kesRate = 130.25; 
         const kesPrice = (active.price * kesRate).toLocaleString();
         checkoutView.innerHTML = `
             <div class="preview-panel" style="border: 1px solid gold; padding: 20px; border-radius: 10px; background: #000;">
@@ -80,7 +80,7 @@ if (pForm) {
 
         if (!activeCar) return alert("Error: No car selected.");
 
-        // Move to Garage
+        
         let myGarage = JSON.parse(localStorage.getItem('user_garage')) || [];
         myGarage.push(activeCar);
         localStorage.setItem('user_garage', JSON.stringify(myGarage));
@@ -132,7 +132,7 @@ if (adminForm) {
             inventory.push(newItem);
             localStorage.setItem('loyal_motors_v2', JSON.stringify(inventory));
             alert("Success! Check the showroom.");
-            location.href = "index.html"; // Go look at the new car
+            location.href = "index.html"; 
         };
         reader.readAsDataURL(fileInput.files[0]);
     };
@@ -162,6 +162,7 @@ window.adminDel = (idx) => {
         location.reload();
     }
 };
+
 
 
 
