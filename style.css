@@ -1,7 +1,3 @@
-/* 
- * Loyal Motors Kenya - Theme Stylesheet 
- * Manual overrides for Portal & Showroom 
- */
 
 :root {
     --gold-main: #d4af37;
@@ -12,7 +8,7 @@
     --speed: 0.25s ease-in-out;
 }
 
-/* 1. Global Resets & Human Quirks */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +16,7 @@
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Custom Scrollbar for that 'Premium' feel */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -33,13 +29,13 @@
 }
 
 body {
-    background-color: #121212; /* Darker than slate for luxury look */
+    background-color: #121212; 
     color: #efefef;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* 2. Navigation & Branding */
+
 header {
     background: #000;
     padding: 1rem 6%;
@@ -76,7 +72,7 @@ nav a:hover, nav a.active {
     text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
 }
 
-/* 3. Grid & Inventory Cards */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
@@ -107,7 +103,7 @@ nav a:hover, nav a.active {
     border-bottom: 1px solid #333;
 }
 
-/* 4. Form Styling - FIXED the 'var' errors */
+
 .form-section, .upload-card {
     max-width: 550px;
     margin: 60px auto;
@@ -143,7 +139,7 @@ input:focus {
     border-color: var(--gold-main);
 }
 
-/* 5. Buttons - Humanized with better feedback */
+
 .btn, button {
     background: var(--gold-main);
     color: #000;
@@ -170,7 +166,7 @@ input:focus {
     background: #ff0000;
 }
 
-/* 6. Checkout Summary Panel */
+
 .summary-card {
     background: #222;
     padding: 20px;
@@ -201,3 +197,4 @@ footer {
     font-size: 0.8rem;
     border-top: 1px solid #222;
 }
+
