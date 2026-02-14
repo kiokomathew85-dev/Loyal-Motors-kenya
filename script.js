@@ -1,4 +1,3 @@
-
 const defaultStock = [
     { name: "Bugatti Mistral", price: 3000000, img: "images/bugatti.jpg" },
     { name: "Lamborghini Revuelto", price: 500000, img: "images/lamborghini.jpg" },
@@ -163,5 +162,6 @@ window.adminDel = (idx) => {
         location.reload();
     }
 };
+
 
 
