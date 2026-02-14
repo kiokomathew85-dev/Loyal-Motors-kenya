@@ -1,4 +1,4 @@
-// --- INITIAL DATA (The "Stock" list) ---
+
 const defaultStock = [
     { name: "Bugatti Mistral", price: 3000000, img: "images/bugatti.jpg" },
     { name: "Lamborghini Revuelto", price: 500000, img: "images/lamborghini.jpg" },
@@ -26,14 +26,13 @@ const defaultStock = [
     
 ];
 
-// --- STORAGE SYNC ---
-// Load inventory or set defaults
+
 let inventory = JSON.parse(localStorage.getItem('loyal_motors_v2')) || defaultStock;
 if (!localStorage.getItem('loyal_motors_v2')) {
     localStorage.setItem('loyal_motors_v2', JSON.stringify(defaultStock));
 }
 
-// 1. SHOWROOM RENDERING
+
 const showroom = document.getElementById('carShowroom');
 if (showroom) {
     inventory.forEach((unit, idx) => {
@@ -52,7 +51,7 @@ if (showroom) {
     });
 }
 
-// 2. CHECKOUT PREVIEW LOGIC
+
 const checkoutView = document.getElementById('checkoutPreview');
 if (checkoutView) {
     const active = JSON.parse(localStorage.getItem('activeOrder'));
@@ -72,7 +71,7 @@ if (checkoutView) {
     }
 }
 
-// 3. THE "PLACE ORDER" SUBMIT (The heart of the checkout)
+
 const pForm = document.getElementById('purchaseForm');
 if (pForm) {
     pForm.onsubmit = function(e) {
@@ -89,13 +88,13 @@ if (pForm) {
 
         alert("Sweet! Order placed, " + customer + ". " + activeCar.name + " is now in your garage!");
         
-        // Clean up and go to garage
+        
         localStorage.removeItem('activeOrder');
         location.href = "garage.html";
     };
 }
 
-// 4. GARAGE DISPLAY
+
 const myGarageGrid = document.getElementById('garageDisplay');
 if (myGarageGrid) {
     const mine = JSON.parse(localStorage.getItem('user_garage')) || [];
@@ -115,7 +114,7 @@ if (myGarageGrid) {
     }
 }
 
-// 5. ADMIN UPLOAD FORM
+
 const adminForm = document.getElementById('vehicle-upload-form');
 if (adminForm) {
     adminForm.onsubmit = function(e) {
@@ -140,7 +139,7 @@ if (adminForm) {
     };
 }
 
-// Helper: Clear garage button logic
+
 const clearBtn = document.getElementById('clearGarageBtn');
 if (clearBtn) {
     clearBtn.onclick = () => {
@@ -151,7 +150,7 @@ if (clearBtn) {
     };
 }
 
-// Global functions for buttons
+
 window.orderUnit = (idx) => {
     localStorage.setItem('activeOrder', JSON.stringify(inventory[idx]));
     location.href = "buy.html";
@@ -164,4 +163,5 @@ window.adminDel = (idx) => {
         location.reload();
     }
 };
+
 
